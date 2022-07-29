@@ -1,0 +1,47 @@
+*{ 
+    margin: 0; 
+    background: rgba(0, 0, 0, 0.3) ;
+	
+	
+ } 
+
+ header{ 
+    text-align: center;
+    
+    color: white; 
+    padding: 40px;
+ } 
+ 
+ header h1{ 
+    margin-bottom: 50px; 
+    font-size: 50px;
+ }
+
+ main { 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    
+    
+ }
+ 
+ main button{ 
+    padding: 10px 8px;
+    color: #fff;
+    background: #039b99;
+    border: 1px solid #555;
+    border-radius: 5px;
+    text-align: center;
+    user-select: none;
+    cursor: pointer;
+
+
+    margin-top: 100PX;
+    margin-right: 100px;
+    margin-bottom: 20px; 
+    font-size: 30px;
+ }
+ main button:hover{
+    background: #0509ee;
+    transition: background 1s;
+ }
