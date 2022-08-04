@@ -6,12 +6,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <link rel="stylesheet" href="estilo.css">
     <title>Project Arduino</title>
+
+   
 </head>
+<script  src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script  src="https://www.gstatic.com/firebasejs/8.8.1/firebase-database.js"></script>
+
+<script>
+    const firebaseConfig = {
+    apiKey: "AIzaSyANladsaDM_sMcb3Y-3Idb70NImuAlChtI",
+    authDomain: "projectoarduino-6a025.firebaseapp.com",
+    databaseURL: "https://projectoarduino-6a025-default-rtdb.firebaseio.com",
+    projectId: "projectoarduino-6a025",
+    storageBucket: "projectoarduino-6a025.appspot.com",
+    messagingSenderId: "748378177423",
+    appId: "1:748378177423:web:daa72d59ec1f0baf81d5fa",
+    measurementId: "G-G5QJF5LB9T"
+    }
+    // Initialize Firebase
+
+    
+    firebase.initializeApp(firebaseConfig);
+
+    function ledOn() {
+firebase.database().ref('SALA').set({ estado: 'LIGADA'})
+    }
+
+    function ledOff(){
+        firebase.database().ref('SALA').set({ estado: 'DESLIGADA'})
+    }
+
+</script>
+
 <body>
     <fieldset>
     <header> 
-
-        
+ 
         <h1>Aula Arduino</h1> 
         <h2>Faculdade de Engenharia</h2> 
         <h2>Estado da Lampada</h2>
@@ -19,8 +49,8 @@
     </fieldset>
     </header> 
     <main> 
-        <button id="acender">Ligar</button>  
-        <button id="desligar">Desligar</button>
+        <button class="led-on" onclick="ledOn()">ligar</button>
+        <button class="led-off" onclick="ledOff()">Desligar</button>
     </main>
     </fieldset>
 </body>
